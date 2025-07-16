@@ -1,36 +1,129 @@
-# 🏥 Hospital Management Data Warehouse & BI Project (IT3021)
+# 📊 OLAP Cube and Power BI Reporting – Hospital Management DWBI Project
 
-This is a complete Data Warehousing and BI project for a simulated hospital system. Built with Microsoft SQL Server, SSIS, SSAS, and Power BI.
+This repository showcases the second phase of a Data Warehousing and Business Intelligence (DWBI) project for a **General Hospital Management System**. The focus of **Assignment 2** is on building an **SSAS OLAP Cube** and designing **Power BI dashboards** for rich analytical insights.
 
-## 🧰 Tools Used
-- SQL Server Management Studio (SSMS)
-- SQL Server Integration Services (SSIS)
+> 🔄 This builds upon the data warehouse developed in Assignment 1.
+
+---
+
+## 🎓 Academic Context
+
+- **Module**: IT3021 – Data Warehousing and Business Intelligence  
+- **Semester**: Year 3 – Semester 2, 2025  
+- **Student ID**: IT22184030  
+- **Name**: Savindi N. Abeykoon  
+- **Specialization**: BSc (Hons) in IT – Data Science  
+- **Institution**: Sri Lanka Institute of Information Technology (SLIIT)
+
+---
+
+## 🏗️ Foundation: Data Warehouse Recap
+
+Used the **Snowflake Schema** DW created in Assignment 1:
+
+### 🧾 Fact Table – `FactEncounters`
+- **Keys**: EncounterID, PatientKey, DepartmentKey, HospitalKey, DateKeys
+- **Measures**: TotalCharge, TotalPayment, TotalAdjustment, Duration, accm_txn times
+
+### 📘 Dimension Tables
+- `DimPatient` – SCD Type 2
+- `DimDepartment` – Department metadata
+- `DimHospital` – Hospital info
+- `DimDate` – Calendar dimension (1990–2099)
+
+---
+
+## 🧮 OLAP Cube Development (SSAS)
+
+### 🔧 Tools Used:
 - SQL Server Analysis Services (SSAS)
-- Visual Studio (SSDT)
-- Power BI
-- Excel (for Cube Browsing)
+- SQL Server Data Tools (SSDT) in Visual Studio
 
-## 📦 Features
-- Snowflake Schema with Fact + Dimension Tables
-- Multi-source ETL with SSIS (CSV + SQL Server)
-- SCD Type 2 handling for DimPatient
-- Accumulating Fact Table processing
-- OLAP Cube built with SSAS
-- Power BI Reports with Slicers, Drilldown, and Matrix Views
+### 🛠️ Cube Implementation Steps:
+1. **New SSAS Project** in Visual Studio
+2. **Data Source**: Connected to SQL Server DW
+3. **Data Source View (DSV)**: Included relevant fact/dimension tables
+4. **Cube Wizard**:
+   - Selected `FactPatientEncounter` as fact table
+   - Defined measures (e.g., TotalCharge, Duration)
+   - Added dimensions: `DimPatient`, `DimDate`, `DimDepartment`, `DimHospital`
+5. **Deployment**: Cube deployed to local SSAS server
+6. **Browsing & Querying**: Cube tested using Visual Studio browser and Excel
 
-## 🗂 Project Structure
-- `DWBI_Assignment_1_IT22184030_Abeykoon_S.N.pdf` – Assignment 1 Report (ETL)
-- `DWBI_Assignment_2.docx` – Assignment 2 Report (SSAS + Power BI)
-- `SQL_Scripts/` – SQL files for schema creation, keys, and data
-- `Sample_Data/` – Patient.csv and other flat files
-- `Screenshots/` – ETL packages, SSAS Cube, Power BI dashboards
-- `README.md` – This documentation file
+---
 
-## 💾 SQL Server .bak File
-[Download Hospital_DWBI_Backup.bak](https://drive.google.com/your-link)
+## 🧪 OLAP Operations Demonstrated
+
+### 📈 1. PivotChart – Department Duration Analysis
+Visualized % duration across departments.  
+Telemetry showed highest duration (≈17%), followed by Critical Care and Oncology.
+
+### 🧮 2. Roll-Up
+Rolled up patient data hierarchy: **Street → City → Region** to view aggregated insights.
+
+### 🔎 3. Drill Down
+Explored metrics from City → Street → Individual Patient level for granular analysis.
+
+### 🪞 4. Slice
+Sliced cube on dimension value (e.g., Department = "Cardiology") for targeted analytics.
+
+### 🎲 5. Dice
+Filtered cube on multiple dimensions: departments, hospitals, patient location, and length of stay.
+
+---
+
+## 📊 Power BI Reports
+
+Created 4 dynamic Power BI reports on top of the OLAP cube:
+
+### 📌 Report 1 – Matrix View
+- Rows: Departments | Columns: Hospitals
+- Measures: TotalCharges
+- Interactive expansion/collapse supported
+
+### 📌 Report 2 – Cascading Slicers
+- Slicers: City → Street
+- Responsive visuals (bar, pie charts) showing patient distribution and charges
+
+### 📌 Report 3 – Drill-Down Hierarchy
+- Custom hierarchy: Hospital → Department
+- Users can drill into detailed departmental metrics
+
+### 📌 Report 4 – Drill-Through Functionality
+- Navigate from summary (e.g., by city) to detailed patient-level data
+- Enhances root-cause exploration
+
+---
+
+## 🖼️ Visuals & Screenshots
+
+> 📁 `/Screenshots/` folder contains:
+- SSAS Cube browser views
+- DSV diagrams
+- Power BI dashboards (all 4 reports)
+- OLAP operation examples (drill down, slice, dice)
+
+---
+
+## 💡 Key Highlights
+
+✅ OLAP cube modeling with SSAS  
+✅ Cube browsing via Excel & Visual Studio  
+✅ Hierarchies, KPIs, Measures  
+✅ Full OLAP operation coverage: Slice, Dice, Roll-Up, Drill-Down  
+✅ Dynamic Power BI reports with drill-through & slicers
+
+---
 
 ## 👩‍💻 Author
-Savindi N. Abeykoon  
-IT22184030 – BSc in IT (Data Science) – SLIIT
-# OLAP-Cube-&-Power-BI-Reporting
-OLAP Cube and Power BI Reporting for a Hospital Management Data Warehouse
+
+**Savindi N. Abeykoon**  
+Student ID: IT22184030  
+[LinkedIn](https://www.linkedin.com/in/yourprofile) • [GitHub](https://github.com/yourusername)
+
+---
+
+## 📜 License
+
+This project is created for academic and portfolio purposes. Reuse is permitted with proper credit.
+
