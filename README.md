@@ -24,6 +24,8 @@ For this, I use the data warehouse implemented and populated in Data-Warehouse-E
 1. **New SSAS Project** in Visual Studio
 2. **Data Source**: Connected to SQL Server DW
 3. **Data Source View (DSV)**: Included relevant fact/dimension tables
+![Dashboard View](Screenshots/DSV.png)
+ 
 4. **Cube Wizard**:
    - Selected `FactPatientEncounter` as fact table
    - Defined measures (e.g., TotalCharge, Duration)
