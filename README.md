@@ -49,43 +49,59 @@ For this, I use the data warehouse implemented and populated in Data-Warehouse-E
 
 ### 📈 1. PivotChart – Department Duration Analysis
 Visualized % duration across departments.  
-Telemetry showed highest duration (≈17%), followed by Critical Care and Oncology.
+
+![Dashboard View](Screenshots/pivot.png)
 
 ### 🧮 2. Roll-Up
 Rolled up patient data hierarchy: **Street → City → Region** to view aggregated insights.
 
+![Dashboard View](Screenshots/roll-up.png)
+
 ### 🔎 3. Drill Down
 Explored metrics from City → Street → Individual Patient level for granular analysis.
+
+![Dashboard View](Screenshots/drill-down.png)
 
 ### 🪞 4. Slice
 Sliced cube on dimension value (e.g., Department = "Cardiology") for targeted analytics.
 
+![Dashboard View](Screenshots/slice.png)
+
 ### 🎲 5. Dice
 Filtered cube on multiple dimensions: departments, hospitals, patient location, and length of stay.
+
+![Dashboard View](Screenshots/dice.png)
 
 ---
 
 ## 📊 Power BI Reports
-
-Created 4 dynamic Power BI reports on top of the OLAP cube:
 
 ### 📌 Report 1 – Matrix View
 - Rows: Departments | Columns: Hospitals
 - Measures: TotalCharges
 - Interactive expansion/collapse supported
 
+![Dashboard View](Screenshots/report.png)
+
 ### 📌 Report 2 – Cascading Slicers
 - Slicers: City → Street
 - Responsive visuals (bar, pie charts) showing patient distribution and charges
+
+![Dashboard View](Screenshots/report1.png)
 
 ### 📌 Report 3 – Drill-Down Hierarchy
 - Custom hierarchy: Hospital → Department
 - Users can drill into detailed departmental metrics
 
+![Dashboard View](Screenshots/report3.1.png)
+
 ### 📌 Report 4 – Drill-Through Functionality
 - Navigate from summary (e.g., by city) to detailed patient-level data
 - Enhances root-cause exploration
 
+![Dashboard View](Screenshots/report4.1.png)
+
+![Dashboard View](Screenshots/report4.2.png)
 
 ---
 
