@@ -1,25 +1,6 @@
 # 📊 OLAP Cube and Power BI Reporting – Hospital Management DWBI Project
 
-This repository showcases the second phase of a Data Warehousing and Business Intelligence (DWBI) project for a **General Hospital Management System**. The focus of **Assignment 2** is on building an **SSAS OLAP Cube** and designing **Power BI dashboards** for rich analytical insights.
-
-> 🔄 This builds upon the data warehouse developed in Assignment 1.
-
----
-
-## 🎓 Academic Context
-
-- **Module**: IT3021 – Data Warehousing and Business Intelligence  
-- **Semester**: Year 3 – Semester 2, 2025  
-- **Student ID**: IT22184030  
-- **Name**: Savindi N. Abeykoon  
-- **Specialization**: BSc (Hons) in IT – Data Science  
-- **Institution**: Sri Lanka Institute of Information Technology (SLIIT)
-
----
-
-## 🏗️ Foundation: Data Warehouse Recap
-
-Used the **Snowflake Schema** DW created in Assignment 1:
+For this, I use the data warehouse implemented and populated in Data-Warehouse-ETL-Project. It is designed in a Snowflake schema and implemented in Microsoft SQL Server. The data warehouse supports analytical reporting for hospital operations such as patient visits, department services, and financial metrics
 
 ### 🧾 Fact Table – `FactEncounters`
 - **Keys**: EncounterID, PatientKey, DepartmentKey, HospitalKey, DateKeys
@@ -33,7 +14,7 @@ Used the **Snowflake Schema** DW created in Assignment 1:
 
 ---
 
-## 🧮 OLAP Cube Development (SSAS)
+## 🧮 OLAP Cube Implementation (SSAS)
 
 ### 🔧 Tools Used:
 - SQL Server Analysis Services (SSAS)
