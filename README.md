@@ -97,6 +97,8 @@ Filtered cube on multiple dimensions: departments, hospitals, patient location, 
 
 ![Dashboard View](Screenshots/report3.1.png)
 
+![Dashboard View](Screenshots/report3.2.png)
+
 ### 📌 Report 4 – Drill-Through Functionality
 - Navigate from summary (e.g., by city) to detailed patient-level data
 - Enhances root-cause exploration
