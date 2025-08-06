@@ -1,6 +1,5 @@
 # 📊 OLAP Cube and Power BI Reporting 
 
-#### Hospital Management
 For this, I use the data warehouse implemented and populated in Data-Warehouse-ETL-Project. It is designed in a Snowflake schema and implemented in Microsoft SQL Server. The data warehouse supports analytical reporting for hospital operations such as patient visits, department services, and financial metrics
 
 ### 🧾 Fact Table – `FactEncounters`
