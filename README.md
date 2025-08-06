@@ -35,9 +35,9 @@ For this, I use the data warehouse implemented and populated in Data-Warehouse-E
 
   ![Dashboard View](Screenshots/cube.png)
 
-6. **Browsing & Querying**: Cube tested using Visual Studio browser and Excel
+  ![Dashboard View](Screenshots/deploy_cube.png)
 
-![Dashboard View](Screenshots/deploy_cube.png)
+6. **Browsing & Querying**: Cube tested using Visual Studio browser and Excel
 
 ![Dashboard View](Screenshots/Hierarchy.png)
 
