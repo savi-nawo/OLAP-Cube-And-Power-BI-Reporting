@@ -24,6 +24,7 @@ For this, I use the data warehouse implemented and populated in Data-Warehouse-E
 1. **New SSAS Project** in Visual Studio
 2. **Data Source**: Connected to SQL Server DW
 3. **Data Source View (DSV)**: Included relevant fact/dimension tables
+
 ![Dashboard View](Screenshots/DSV.png)
  
 4. **Cube Wizard**:
@@ -31,7 +32,16 @@ For this, I use the data warehouse implemented and populated in Data-Warehouse-E
    - Defined measures (e.g., TotalCharge, Duration)
    - Added dimensions: `DimPatient`, `DimDate`, `DimDepartment`, `DimHospital`
 5. **Deployment**: Cube deployed to local SSAS server
+
+  ![Dashboard View](Screenshots/cube.png)
+
 6. **Browsing & Querying**: Cube tested using Visual Studio browser and Excel
+
+![Dashboard View](Screenshots/deploy_cube.png)
+
+![Dashboard View](Screenshots/Hierarchy.png)
+
+![Dashboard View](Screenshots/KPI2.png)
 
 ---
 
@@ -76,15 +86,6 @@ Created 4 dynamic Power BI reports on top of the OLAP cube:
 - Navigate from summary (e.g., by city) to detailed patient-level data
 - Enhances root-cause exploration
 
----
-
-## 🖼️ Visuals & Screenshots
-
-> 📁 `/Screenshots/` folder contains:
-- SSAS Cube browser views
-- DSV diagrams
-- Power BI dashboards (all 4 reports)
-- OLAP operation examples (drill down, slice, dice)
 
 ---
 
@@ -95,14 +96,6 @@ Created 4 dynamic Power BI reports on top of the OLAP cube:
 ✅ Hierarchies, KPIs, Measures  
 ✅ Full OLAP operation coverage: Slice, Dice, Roll-Up, Drill-Down  
 ✅ Dynamic Power BI reports with drill-through & slicers
-
----
-
-## 👩‍💻 Author
-
-**Savindi N. Abeykoon**  
-Student ID: IT22184030  
-[LinkedIn](https://www.linkedin.com/in/yourprofile) • [GitHub](https://github.com/yourusername)
 
 ---
 
