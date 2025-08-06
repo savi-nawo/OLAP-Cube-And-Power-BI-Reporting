@@ -65,7 +65,9 @@ Explored metrics from City → Street → Individual Patient level for granular 
 ### 🪞 4. Slice
 Sliced cube on dimension value (e.g., Department = "Cardiology") for targeted analytics.
 
-![Dashboard View](Screenshots/slice.png)
+![Dashboard View](Screenshots/slice_1.png)
+
+![Dashboard View](Screenshots/slice_2.png)
 
 ### 🎲 5. Dice
 Filtered cube on multiple dimensions: departments, hospitals, patient location, and length of stay.
